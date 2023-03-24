@@ -129,12 +129,13 @@ persistence:
   ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
   ##   GKE, AWS & OpenStack)
   ##
-  # storageClass: "-"
+  storageClass: "longhorn"
   dataDir:
     # Set this to false if you don't care to persist state between restarts.
-    enabled: false
+    enabled: ture
     # existingClaim: nil
-    Size: 1Gi
+    Size: 50Gi
+  resourcePolicy: "keep"
 
 podAnnotations: {}
 
